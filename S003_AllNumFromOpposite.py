@@ -15,15 +15,26 @@ num_negative = - num
 if num_negative > num:
     num, num_negative = num_negative, num
 max_count_numbers = int(input('Укажите максимальное количество чисел в одной строке: '))
-i = 0
 print(f'Числа от {num_negative} до {num}: ')
+j = 1
+
+# Решение 1
 while num_negative < num:
-    if i < max_count_numbers:
+    if j < max_count_numbers:
         print(num_negative, end=', ')
     else:
         print(f'{num_negative}, ')
-        i = -1
+        j = 0
     num_negative += 1
-    i += 1
+    j += 1
 print(num_negative)
 
+# Решение 2
+# for i in range(num_negative, num):
+#     if j < max_count_numbers:
+#         print(i, end=', ')
+#     else:
+#         print(f'{i}, ')
+#         j = 0
+#     j += 1
+# print(num)
