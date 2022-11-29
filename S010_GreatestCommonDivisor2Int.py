@@ -14,6 +14,8 @@ num_min = abs(int(input('Введите первое целое число: ')))
 num_max = abs(int(input('Введите второе целое число: ')))
 if num_min > num_max:
     num_min, num_max = num_max, num_min
+
+# Решение 1, от меньшего числа
 divisor = num_min
 for i in range(1, num_min + 1):
     if not num_min % i:
@@ -21,3 +23,12 @@ for i in range(1, num_min + 1):
         if not num_max % divisor:
             break
 print(f'НОД = {divisor}')
+
+# Решение 2, через остатки
+while True:
+    if num_max % num_min == 0:
+        break
+    hell = num_min
+    num_min = num_max % num_min
+    num_max = hell
+print(f'НОД 2 = {num_min}')
