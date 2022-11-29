@@ -27,7 +27,7 @@ else:
             for k in range(sec, -1, -1):
                 print('{:02} : {:02} : {:02}'.format(i, j, k))
                 time.sleep(1)
-                total_sec -= 1
+            total_sec -= sec + 1
             if total_sec >= 59:
                 sec = 59
         if total_sec >= 3599:
