@@ -21,6 +21,3 @@ for i in range(1, num_min + 1):
         if not num_max % divisor:
             break
 print(f'НОД = {divisor}')
-print(i)
-
-
